@@ -27,14 +27,14 @@ public class TestProducer {
 
         Properties props = new Properties();
         props.put("bootstrap.servers", bootstrapServers);
-        // wprowadź poniżej pozostałe parametry producenta Kafki
-        // patrz materiały wykładowe lub dokumentacja
+        // TODO: wprowadź poniżej pozostałe parametry producenta Kafki
+        // patrz: materiały wykładowe lub dokumentacja
         ???
 
-        // uzupełnij polecenie tworzące producenta Kafki
+        // TODO: uzupełnij polecenie tworzące producenta Kafki
         KafkaProducer<String, String> producer = ???;
 
-        // przeanalizuj poniższy kod aby dowiedzieć się jak on działa
+        // przeanalizuj poniższy kod, aby dowiedzieć się jak on działa
         final File folder = new File(inputDir);
         File[] listOfFiles = folder.listFiles();
         String[] listOfPaths = Arrays.stream(listOfFiles).
@@ -45,7 +45,7 @@ public class TestProducer {
             try (Stream<String> stream = Files.lines(Paths.get(fileName)).
                     skip(Integer.parseInt(headerLength))) {
 
-                // uzupełnij polecenie wysyłające komunikat do odpowiedniego
+                // TODO: uzupełnij polecenie wysyłające komunikat do odpowiedniego
                 // tematu Kafki. Do wskazania tematu użyj zmiennej topicName
                 // Kluczem niech będzie wyrażenie String.valueOf(line.hashCode())
 
