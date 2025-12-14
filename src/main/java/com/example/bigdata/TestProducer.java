@@ -38,7 +38,7 @@ public class TestProducer {
         final File folder = new File(inputDir);
         File[] listOfFiles = folder.listFiles();
         String[] listOfPaths = Arrays.stream(listOfFiles).
-                map(file -> file.getAbsolutePath()).toArray(String[]::new);
+                map(File::getAbsolutePath).toArray(String[]::new);
         Arrays.sort(listOfPaths);
 
         for (final String fileName : listOfPaths) {
